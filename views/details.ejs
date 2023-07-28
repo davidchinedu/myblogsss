@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navb1"><h1>DETAILS</h1></div>
+        
+    </nav>
+    <section class="se"></section>
+<div class="det">
+ <div class="lid"> <%=found.title%></div><br>
+
+
+<div class="sid"><%=found.post%></div>
+</div>
+<div class="cont">
+ <a class="deta" href="/blog/edit/<%= found._id%>/<%= blogs.username %>">edit</a>
+<a class="deta" href="/blog/delete/<%= found._id%>/<%= blogs.username %>">delete</a>
+<a class="deta" href="/blog/return/<%= blogs.username %>">home</a>
+</div>
+</body>
+</html>

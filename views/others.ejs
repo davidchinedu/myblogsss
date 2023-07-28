@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTHERS</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navb1">
+            <h1>TIMELINE</h1>
+        </div>
+    </nav>
+    <section class="se"></section>
+    <main>
+        <%for(blog of blogs.feed){%>
+            <div class="out">
+            <div class="lid"><%=blog.title%></div><br>
+            
+
+
+            <div class="inli">
+                <a href="/blog/otherdetails/<%=blog._id%>/<%= blogs.username %>/<%= origin %>">details</a>
+            </div>
+</div><br>
+            <%}%>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <nav class="navbar">
+       <div class="navb1"> <h1>TIMELINE</h1></div>
+       
+       <div class="navb3">
+         <form action="/blog/others/<%=blogs.username%>" method="POST">
+            <label for="fr" >search bloggers</label>
+            <input  id="fr" placeholder="type in username" name="username">
+            <button>search</button>
+        </form>
+        </div>
+    </nav>
+    
+    <section class="se"></section>
+    <nav class="alone">
+        <div class="navb2"><p><a class="a" href="/blog/newpost/<%=blogs.username%>">new post</a></p></div>
+    </nav>
+<main>
+<%for(blog of blogs.feed){%>
+    <div class="out">
+       <div class="lid"><%=blog.title%></div><br>
+    
+       <div class="inli"><a  class="ad" href="/blog/details/<%=blog._id%>/<%= blogs.username %>">details</a></div>
+
+    <!-- <hr>   -->
+    </div><br>
+       <%}%>           
+
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
