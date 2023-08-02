@@ -175,20 +175,6 @@ app.get("/blog/otherdetails/:id/:is/:origin", async (req, res) => {
 
 
 
-app.get('/set', async(req, res)=>{
-  const user = 'toronto'
-  const ax =  await axios.post('localhost:1011', {user}, {header:{accept: "application/json"}})
-  .then((data)=>{
-    console.log(data)
-  })
-  .catch((e)=>{
-    console.log(e)
-  })
-  res.send('went through')
-
-})
-
-
 
 
 
