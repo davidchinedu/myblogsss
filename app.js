@@ -174,6 +174,23 @@ app.get("/blog/otherdetails/:id/:is/:origin", async (req, res) => {
 });
 
 
+
+app.get('/set', async(req, res)=>{
+  const user = 'toronto'
+  const ax =  await axios.post('localhost:1011', {user}, {header:{accept: "application/json"}})
+  .then((data)=>{
+    console.log(data)
+  })
+  .catch((e)=>{
+    console.log(e)
+  })
+
+})
+
+
+
+
+
 let port = process.env.PORT
 if(port == null || port == ""){
   port = 4000
