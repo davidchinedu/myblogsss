@@ -9,7 +9,7 @@ const session = require("express-session");
 const Post = require("./models/blogmodel.js");
 
 async function main() {
-  await mongoose.connect(url, {
+  await mongoose.connect('mongodb://127.0.0.1:27017/hello', {
     useNewUrlParser: true, useUnifiedTopology: true
 });
 }
@@ -182,6 +182,6 @@ let port = process.env.PORT
 if(port == null || port == ""){
   port = 4000
 }
-app.listen(port, (req, res) => {
+app.listen(4000, (req, res) => {
   console.log("continue");
 });
